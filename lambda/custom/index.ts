@@ -1,4 +1,4 @@
-import * as Alexa from 'ask-sdk-core';
+ import * as Alexa from 'ask-sdk-core';
 import { RequestEnvelope, ResponseEnvelope, services, SessionEndedRequest, IntentRequest, Intent } from 'ask-sdk-model';
 
 const title = 'お米のお水';
@@ -36,7 +36,6 @@ const RiceHandler = {
                 .reprompt(start_message)
                 .getResponse();
         }
-        //let rice: string = '白米胃';
         const rice: string = intent.slots.rice.value;
         const attributes = handlerInput.attributesManager.getSessionAttributes();
         
@@ -49,8 +48,7 @@ const RiceHandler = {
             attributes.rice = rice;
             handlerInput.attributesManager.setSessionAttributes(attributes);
         }
-        
-        //let amount: string = request.intent.slots.Amount.value;
+
         const amount: string = intent.slots.amount.value;
         if (!attributes.amount && !amount) {
             return handlerInput.responseBuilder
