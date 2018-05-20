@@ -1,0 +1,20 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "ja-JP": {
+          "name": "お米のお水"
+        }
+      }
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "uri": "arn:aws:lambda:ap-northeast-1:577580500480:function:ricewater"
+        },
+        "interfaces": []
+      }
+    },
+    "manifestVersion": "1.0"
+  }
+}

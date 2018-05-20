@@ -1,0 +1,76 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "こめみず",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "RiceIntent",
+          "slots": [
+            {
+              "name": "Rice",
+              "type": "Rice"
+            },
+            {
+              "name": "Amount",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "{Amount} 合",
+            "{Rice} を {Amount} 合",
+            "{Amount} 合 の {Rice}  の水",
+            "{Rice}  {Amount} 合の水",
+            "{Rice}  {Amount} 合の水の量",
+            "{Rice}  {Amount} 合",
+            "{Rice}"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "id": "GlutinousRice",
+              "name": {
+                "value": "もち米"
+              }
+            },
+            {
+              "id": "BrownRice",
+              "name": {
+                "value": "玄米"
+              }
+            },
+            {
+              "id": "WhiteRice",
+              "name": {
+                "value": "白米",
+                "synonyms": [
+                  "白飯",
+                  "はくまい",
+                  "米",
+                  "お米",
+                  "ご飯",
+                  "ライス"
+                ]
+              }
+            }
+          ],
+          "name": "Rice"
+        }
+      ]
+    }
+  }
+}
